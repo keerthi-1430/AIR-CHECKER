@@ -16,5 +16,3 @@ Air Checker is a web application that allows users to check air quality informat
 ## Purpose
 This project was developed to practice frontend web development and working with real-time data.
 
-## Author
-Keerthi Priya Doddi
