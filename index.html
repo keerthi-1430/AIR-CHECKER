@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Air Quality Checker</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #74b9ff, #81ecec, #a29bfe);
+}
+
+.container {
+    width: 330px;
+    padding: 20px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.heading {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.button {
+    width: 160px;
+    padding: 10px;
+    margin: 15px auto;
+    display: block;
+    background: #0d8bf2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #006fd6;
+}
+
+.result-box {
+    display: none;
+    margin-top: 18px;
+    padding: 15px;
+    border: 2px solid rgba(255,255,255,0.6);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.15);
+}
+
+.result-heading {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.35);
+    padding: 8px 12px;
+    margin: 6px 0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #0b3d91;
+}
+
+.value {
+    color: #222;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <form id="form">
+        <h1 class="heading">🌤️ Air Quality Checker</h1>
+
+        <input type="text" id="latitude" placeholder="Enter Latitude" required>
+        <input type="text" id="longitude" placeholder="Enter Longitude" required>
+
+        <button class="button" type="submit">Check Air Quality</button>
+    </form>
+
+    <div class="result-box" id="resultBox">
+
+        <h2 class="result-heading">🌿 AIR QUALITY</h2>
+
+        <p class="details">AQI <span class="value" id="aqi">--</span></p>
+        <p class="details">CO <span class="value" id="co">--</span></p>
+        <p class="details">NO₂ <span class="value" id="no2">--</span></p>
+        <p class="details">O₃ <span class="value" id="o3">--</span></p>
+        <p class="details">PM2.5 <span class="value" id="pm25">--</span></p>
+        <p class="details">PM10 <span class="value" id="pm10">--</span></p>
+        <p class="details">SO₂ <span class="value" id="so2">--</span></p>
+
+    </div>
+
+</div>
+
+<script src="index.js"></script>
+
+</body>
+</html>
